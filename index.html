@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>Tibetan Mastiff Family</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown-dark: #4B352A;
+            --brown-light: #CA7842;
+            --green: #B2CD9C;
+            --cream: #F0F2BD;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Raleway', sans-serif;
+            background-color: var(--cream);
+            color: var(--brown-dark);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            background-color: var(--cream);
+            padding: 20px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--brown-dark);
+            font-weight: 600;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: var(--brown-light);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px;
+        }
+
+        .hero-image {
+            position: relative;
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 6px;
+            display: block;
+        }
+       .site-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--brown-dark);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+        .info-box {
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            background-color: var(--green);
+            padding: 25px;
+            max-width: 280px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 80px 60px;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 900px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ===== ARTICLES SECTION ===== */
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 60px;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--brown-dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .article-card div {
+            padding: 20px;
+        }
+
+        .article-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .article-card p {
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            padding: 40px 60px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="active">Дома</a>
+        <a href="article1.html">За Виски</a>
+        <a href="article2.html">За Лара</a>
+        <a href="tibetski.html">Тибетски мастиф</a>
+        <a href="prodavnica.html">Продавница</a>
+        <a href="kontakt.html">Контакт</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-image">
+        <h1 class="site-title">TIBETIAN MASTIFF FAMILY</h1>
+        <br>
+        <img src="images/primer4.jpg" alt="Тибетски мастиф">
+        <div class="info-box">
+            Силни, лојални и величествени чувари со древно потекло.
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2>Што е Тибетскиот мастиф?</h2>
+    <p>
+        Тибетскиот мастиф е голема тибетска раса на кучиња. Неговото двојно крзно е средно до долго,
+        зависно од климата, и се среќава во широк спектар на бои, вклучувајќи еднобојна црна, црна и кафеава,
+        разни нијанси на црвена (од бледо златна до темно црвена) и синкаво-сива (разредена црна), а понекогаш
+        и со бели ознаки околу вратот, градите и нозете. Според Американскиот кинолошки клуб, машките тибетски
+        мастифи тежат од 40-70 кг, додека женките тежат од 30-55 кг.
+    </p>
+</section>
+
+<section class="articles">
+    <a href="article1.html" class="article-card">
+        <img src="images/primer2.jpg" alt="Виски">
+        <div>
+            <h3>Повеќе за Виски</h3>
+            <p>Виски е единствениот примерок од расата, која е најскапа во светот и има потекло од Монголија. Го нарекуваат уште и џин меѓу кучињата.</p>
+        </div>
+    </a>
+
+    <a href="article2.html" class="article-card">
+        <img src="images/primer3.jpg" alt="Лара">
+        <div>
+            <h3>Повеќе за Лара</h3>
+            <p>Простор за краток опис на статијата.</p>
+        </div>
+    </a>
+</section>
+
+<footer>
+ <p>Контакт: <br> tibetanmastifffamily@gmail.com <br> <a href="https://www.instagram.com/tibetan_mastiff_family?igsh=MWEzbGF5OGY2N3NhNg%3D%3D&utm_source=qr">@tibetan_mastiff_family</a>
+    </p>
+    <p>© 2026 Сите права се задржани.</p>
+</footer>
+
+</body>
+</html>

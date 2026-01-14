@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тибетски Мастиф</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown-dark: #4B352A;
+            --brown-light: #CA7842;
+            --green: #B2CD9C;
+            --cream: #F0F2BD;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Raleway', sans-serif;
+            background-color: var(--cream);
+            color: var(--brown-dark);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            background-color: var(--cream);
+            padding: 20px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--brown-dark);
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: var(--brown-light);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ===== HERO IMAGE ===== */
+        .article-hero img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        /* ===== ARTICLE CONTENT ===== */
+        .article-content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        .article-content h1 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            padding: 40px 60px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav { flex-wrap: wrap; gap: 15px; justify-content: center; }
+            .article-content { margin: 40px auto; padding: 0 20px; }
+            .gallery { grid-template-columns: 1fr; padding: 0 20px; gap: 20px; }
+            footer { padding: 30px 20px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Дома</a>
+        <a href="article1.html">За Виски</a>
+        <a href="article2.html">За Лара</a>
+        <a href="tibetski.html" class="active">Тибетски мастиф</a>
+        <a href="prodavnica.html">Продавница</a>
+        <a href="kontakt.html">Контакт</a>
+    </nav>
+</header>
+
+<section class="article-hero">
+    <img src="images/primer5.jpg" alt="Тибетски Мастиф">
+</section>
+
+<article class="article-content">
+    <h1>Историја на Тибетскиот Мастиф</h1>
+
+    <p>
+        Тибетскиот мастиф е древна раса на кучиња која потекнува од високите планини на Тибет.
+        Овие кучиња се користеле како чувари на манастири и номадски кампови, заштитувајќи ги
+        стада и семејства од волци и други предатори.
+    </p>
+
+    <p>
+        Расата била позната по својата големина, густото двојно крзно и независниот карактер.
+        Благодарение на нивната лојалност и интелигенција, тибетските мастифи биле многу ценети
+        од локалните народи и подоцна од Европјаните во 19-тиот век.
+    </p>
+
+    <p>
+        Денес, тибетскиот мастиф е симбол на сила, достоинство и древна традиција. Тој е почитуван
+        како чувар и верен пријател, со прекрасен изглед и мирен карактер.
+    </p>
+</article>
+
+<section class="gallery">
+    <img src="images/primer.jpg" alt="Тибетски Мастиф 1">
+    <img src="images/primer2.jpg" alt="Тибетски Мастиф 2">
+    <img src="images/primer3.jpg" alt="Тибетски Мастиф 3">
+</section>
+
+<footer>
+   <p>Контакт: <br> tibetanmastifffamily@gmail.com <br> <a href="https://www.instagram.com/tibetan_mastiff_family?igsh=MWEzbGF5OGY2N3NhNg%3D%3D&utm_source=qr">@tibetan_mastiff_family</a>
+    </p>
+    <p>© 2026 Сите права се задржани.</p>
+</footer>
+
+</body>
+</html>

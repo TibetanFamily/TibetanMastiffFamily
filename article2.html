@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>За Лара</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown-dark: #4B352A;
+            --brown-light: #CA7842;
+            --green: #B2CD9C;
+            --cream: #F0F2BD;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Raleway', sans-serif;
+            background-color: var(--cream);
+            color: var(--brown-dark);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            background-color: var(--cream);
+            padding: 20px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--brown-dark);
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: var(--brown-light);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ===== HERO IMAGE ===== */
+       .article-hero img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    background-color: var(--cream);
+    display: block;
+}
+        /* ===== ARTICLE CONTENT ===== */
+        .article-content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        .article-content h1 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            padding: 40px 60px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Дома</a>
+        <a href="article1.html" >За Виски</a>
+        <a href="article2.html"class="active">За Лара</a>
+        <a href="tibetski.html">Тибетски мастиф</a>
+        <a href="prodavnica.html">Продавница</a>
+        <a href="kontakt.html">Контакт</a>
+    </nav>
+</header>
+
+<section class="article-hero">
+    <img src="images/primer3.jpg" alt="Лара">
+</section>
+
+<article class="article-content">
+    <h1>За Лара</h1>
+
+    <p>
+        Тибетскиот мастив се вика Виски. 
+        Тежи околу 80 килограми. Тој, не само во Прилеп, туку и во Македонија е единствениот примерок од расата, која е најскапа во светот и има потекло од Монголија. 
+        Го нарекуваат уште и џин меѓу кучињата.
+    </p>
+
+    <p>
+         – Со специјален превоз, со флуоросцентно светло во боксот, кучето стигна во Германија, па во Лозана, Швајцарија каде што живеев. 
+         И во Швајцарија беше уникатен, единствен. Г
+         о поистоветуваа со чау – чау. Ги минавме сите формалности и процедури. 
+         Оттогаш до денес сме заедно. Беше стар две ипол месеци со тежина од 15 – 20 килограми. 
+         Сега има две ипол години и тежи 80 килограми – раскажува Василески.
+    </p>
+
+    <p>
+        – Виски е како човек, едуциран. Одевме 8 месеци на социјализација. 
+        Научи да го почитува сопственикот и да не е агресивен кон луѓето и другите кучиња.
+         Инаку, ќе завршеше во логор или ќе го успиеа. 
+         Виски е чувар, не напаѓа, тоа му е во природата. 
+         Во Монголија се како кучиња чувари на крупни стада стока. 
+        Легендата за настанувањето на расата упатува дека е од монах – објаснува Василески.
+    </p>
+</article>
+
+<section class="gallery">
+    <img src="images/primer2.jpg" alt="Тибетски мастиф 1">
+    <img src="images/primer3.jpg" alt="Тибетски мастиф 2">
+    <img src="images/primer4.jpg" alt="Тибетски мастиф 3">
+    <img src="images/primer5.jpg" alt="Тибетски мастиф 4">
+</section>
+
+<footer>
+    <p>Контакт: <br> tibetanmastifffamily@gmail.com <br> <a href="https://www.instagram.com/tibetan_mastiff_family?igsh=MWEzbGF5OGY2N3NhNg%3D%3D&utm_source=qr">@tibetan_mastiff_family</a>
+    </p>
+    <p>© 2026 Сите права се задржани.</p>
+</footer>
+
+</body>
+</html>

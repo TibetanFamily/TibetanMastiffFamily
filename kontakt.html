@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brown-dark: #4B352A;
+            --brown-light: #CA7842;
+            --green: #B2CD9C;
+            --cream: #F0F2BD;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', 'Raleway', sans-serif;
+            background-color: var(--cream);
+            color: var(--brown-dark);
+        }
+
+        /* ===== NAVIGATION ===== */
+        header {
+            background-color: var(--cream);
+            padding: 20px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--brown-dark);
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: var(--brown-light);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .contact-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        .contact-container h1 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .bio {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info a {
+            color: var(--brown-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: var(--brown-light);
+        }
+
+        /* ===== OPTIONAL CONTACT FORM ===== */
+        .contact-form {
+            background-color: var(--green);
+            padding: 40px 30px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--brown-dark);
+            font-size: 16px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background-color: var(--brown-light);
+            color: var(--cream);
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--brown-dark);
+            color: var(--green);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: var(--brown-dark);
+            color: var(--cream);
+            padding: 40px 60px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav { flex-wrap: wrap; gap: 15px; justify-content: center; }
+            .contact-container { padding: 0 20px; }
+            .contact-form { padding: 30px 20px; }
+            footer { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Дома</a>
+        <a href="article1.html">За Виски</a>
+        <a href="article2.html">За Лара</a>
+        <a href="tibetski.html">Тибетски мастиф</a>
+        <a href="prodavnica.html">Продавница</a>
+        <a href="kontakt.html" class="active">Контакт</a>
+    </nav>
+</header>
+
+<main>
+    <div class="contact-container">
+        <h1>Контакт</h1>
+
+        <!-- Short biography -->
+        <div class="bio">
+            <p>
+                Простор за кратка биографија за сопственикот.
+            </p>
+        </div>
+
+        <!-- Contact information -->
+        <div class="contact-info">
+            <p>Е-пошта: <a href="mailto:tibetanmastifffamily@gmail.com">tibetanmastifffamily@gmail.com</a></p>
+            <p>Телефон: <a href="tel:+38970123456">+389 70 123 456</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/tibetan_mastiff_family?igsh=MWEzbGF5OGY2N3NhNg%3D%3D&utm_source=qr" target="_blank">@tibetan_mastiff_family</a></p>
+        </div>
+
+        <!-- Optional contact form -->
+        <div class="contact-form">
+            <h2>Испрати порака</h2>
+            <form action="https://formspree.io/f/mgoovadr" method="POST">
+                <input type="text" name="name" placeholder="Име и Презиме" required>
+                <input type="email" name="_replyto" placeholder="Е-пошта" required>
+                <textarea name="message" rows="5" placeholder="Вашата порака" required></textarea>
+                <button type="submit">Испрати</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+     <p>Контакт: <br> tibetanmastifffamily@gmail.com <br> <a href="https://www.instagram.com/tibetan_mastiff_family?igsh=MWEzbGF5OGY2N3NhNg%3D%3D&utm_source=qr">@tibetan_mastiff_family</a>
+    </p>
+    <p>© 2026 Сите права се задржани.</p>
+</footer>
+
+</body>
+</html>
