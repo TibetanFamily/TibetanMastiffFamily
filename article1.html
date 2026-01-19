@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>За Виски</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
@@ -128,12 +129,43 @@
             font-size: 14px;
             font-family: 'Raleway', sans-serif;
         }
-         @media (max-width: 768px) {
-            header { padding: 15px 20px; }
-            nav { flex-wrap: wrap; gap: 15px; justify-content: center; }
-            .shop-container { grid-template-columns: 1fr; padding: 0 20px; gap: 20px; }
-            footer { padding: 30px 20px; }
-        }
+         /* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column; /* Stacks image and text vertically */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .info-box {
+        position: static; /* Moves the green box below the image instead of floating */
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .articles {
+        grid-template-columns: 1fr; /* Makes cards 1 per row instead of 2 */
+        padding: 20px;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+    
+    .site-title {
+        font-size: 28px; /* Shrinks the title so it doesn't break */
+    }
+}
     </style>
 </head>
 <body>
@@ -195,4 +227,3 @@
 
 </body>
 </html>
-
